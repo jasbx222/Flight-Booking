@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Home, Plane, MapPin, FileText, Settings, Truck, Hotel, Menu, X, BookImageIcon, User, Users } from "lucide-react";
+import { Home, Plane, FileText, Truck, Hotel, Menu, X, BookImageIcon, Users } from "lucide-react";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);

@@ -11,7 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from "./../../ui/card"
-import {
+import
+ {
 type   ChartConfig,
   ChartContainer,
   ChartTooltip,

@@ -1,11 +1,11 @@
-import { useState } from "react";
+
 import { Plus, Hotel, BedDouble, FileText } from "lucide-react";
 import { Card, CardContent } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 
 
 export default function HotelsDashboard() {
-  const [hotels, setHotels] = useState([
+  const hotels= [
     {
       id: 1,
       name: "فندق مكة جراند",
@@ -18,7 +18,7 @@ export default function HotelsDashboard() {
         { type: "غرفة مزدوجة", price: 400 },
       ],
     },
-  ]);
+  ];
 
   return (
     <div className="p-6 space-y-6">

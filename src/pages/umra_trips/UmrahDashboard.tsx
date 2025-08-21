@@ -30,7 +30,7 @@ export default function UmrahDashboard() {
 
   return (
     <div className="p-6 space-y-10">
-      {/* 👇 البطاقات */}
+      {/* البطاقات */}
       <h2 className="text-2xl font-bold mb-4 text-gray-800">الرحلات</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {trips.map((trip) => (
@@ -62,7 +62,7 @@ export default function UmrahDashboard() {
         ))}
       </div>
 
-      {/* 👇 جدول الحجوزات */}
+      {/*  جدول الحجوزات */}
       <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-800">الحجوزات</h2>
       <div className="overflow-x-auto rounded-2xl shadow border border-gray-100">
         <table className="w-full text-right border-collapse">

@@ -14,7 +14,7 @@ interface Booking {
 }
 
 export default function BookingsDashboard() {
-  const [bookings, setBookings] = useState<Booking[]>([
+const bookings :Booking[]=[
     {
       id: 1,
       name: "أحمد علي",
@@ -34,7 +34,7 @@ export default function BookingsDashboard() {
       passportImages: [img],
       ocrData: "Laila Mohamed, 02/02/1992, Iraq"
     },
-  ]);
+  ]
 
   const [filters, setFilters] = useState({ name: "", phone: "", type: "" });
 
