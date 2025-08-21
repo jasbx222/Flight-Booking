@@ -20,7 +20,7 @@ export default function Sidebar() {
       {/* Button to open sidebar on mobile */}
       <button
         onClick={() => setOpen(true)}
-        className="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-white text-blue-600 shadow-lg hover:bg-gray-100 transition"
+        className="md:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-white text-blue-600 shadow-lg hover:bg-gray-100 transition"
       >
         <Menu size={24} />
       </button>
@@ -41,7 +41,7 @@ export default function Sidebar() {
           sm:translate-x-0 sm:relative sm:shadow-none`}
       >
         {/* Close button for mobile */}
-        <div className="sm:hidden flex justify-start px-6 mb-6">
+        <div className="md:hidden flex justify-start px-6 mb-6">
           <button onClick={() => setOpen(false)} className="p-2 rounded-md hover:bg-white/10 transition">
             <X size={24} />
           </button>
