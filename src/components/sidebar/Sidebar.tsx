@@ -11,13 +11,13 @@ export default function Sidebar() {
     { to: "/hotels", label: "الفنادق", icon: Hotel },
     { to: "/trips", label: "الرحلات البرية", icon: Truck },
     { to: "/ads", label: "الإعلانات", icon: FileText },
-    { to: "/bookings", label: "الحجوزات ", icon: BookImageIcon },
-    { to: "/employes", label: "الموظفين ", icon: Users },
+    { to: "/bookings", label: "الحجوزات", icon: BookImageIcon },
+    { to: "/employes", label: "الموظفين", icon: Users },
   ];
 
   return (
     <>
-      {/* Button to open sidebar on mobile */}
+      {/* Mobile/Tablet Menu Button */}
       <button
         onClick={() => setOpen(true)}
         className="md:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-white text-blue-600 shadow-lg hover:bg-gray-100 transition"
@@ -25,7 +25,7 @@ export default function Sidebar() {
         <Menu size={24} />
       </button>
 
-      {/* Sidebar overlay */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -34,15 +34,18 @@ export default function Sidebar() {
       ></div>
 
       {/* Sidebar */}
-      <div
+      <aside
         dir="rtl"
-        className={`fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-sky-900 via-teal-900 to-[#002f2a] text-white flex flex-col justify-between py-8 shadow-2xl overflow-hidden z-50 transform transition-transform duration-300
+        className={`fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-sky-900 via-teal-900 to-[#002f2a] text-white flex flex-col justify-between py-8 shadow-2xl overflow-auto z-50 transform transition-transform duration-300
           ${open ? "translate-x-0" : "translate-x-full"} 
-          sm:translate-x-0 sm:relative sm:shadow-none`}
+          md:translate-x-0 md:relative md:shadow-none`}
       >
-        {/* Close button for mobile */}
+        {/* Close Button for Mobile/Tablet */}
         <div className="md:hidden flex justify-start px-6 mb-6">
-          <button onClick={() => setOpen(false)} className="p-2 rounded-md hover:bg-white/10 transition">
+          <button
+            onClick={() => setOpen(false)}
+            className="p-2 rounded-md hover:bg-white/10 transition"
+          >
             <X size={24} />
           </button>
         </div>
@@ -70,7 +73,7 @@ export default function Sidebar() {
                       : "hover:bg-white/5 hover:translate-x-1"
                   }`
                 }
-                onClick={() => setOpen(false)} // close sidebar on menu click (mobile)
+                onClick={() => setOpen(false)} // close sidebar on mobile/tablet
               >
                 <Icon
                   size={20}
@@ -81,7 +84,7 @@ export default function Sidebar() {
             ))}
           </nav>
         </div>
-      </div>
+      </aside>
     </>
   );
 }
